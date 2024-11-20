@@ -38,15 +38,16 @@
     <meta name="theme-color" content="#002c69">
     <link href="./output.css" rel="stylesheet">
     <script src="./docs/js/menu.js"></script>
+    <script src="./docs/js/carrosselServicos.js"></script>
 </head>
 
-<body>
+<body class="">
     <header class="fixed inset-x-0 top-0 z-50">
         <nav class="bg-[#002c69] flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1 flex-row">
                 <a href="#" class="-m-1.5">
                     <span class="sr-only">RJA Freios</span>
-                    <img class="h-10 w-auto" src="./docs/images/logos/LOGO RJA - FREIOS horizontal.svg"
+                    <img class="h-10 w-auto" src="./docs/images/logos/LOGO RJA - FREIOS horizontal branca.svg"
                         alt="logo_header">
                 </a>
             </div>
@@ -74,14 +75,15 @@
             <div id="menu" class="hidden transition ease-in-out-500" role="dialog" aria-modal="true">
                 <div class="fixed inset-0 z-50"></div>
                 <div
-                    class="fixed bg-[#002c69] inset-y-0 right-0 z-50 w-full overflow-y-auto bg-custom-dark-blue px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">LSG Assessoria</span>
-                            <img class="h-8 w-auto"
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                    class="fixed bg-[#002c69] inset-y-0 right-0 z-50 w-full p-10 h-screen sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex content-center items-center justify-between relative">
+                        <a href="#" class="absolute inset-x-0 mx-auto flex justify-center -m-1.5 p-1.5">
+                            <span class="sr-only">JRA Freios</span>
+                            <img class="h-20 w-auto" src="./docs/images/logos/LOGO RJA - FREIOS vertical branca.svg"
+                                alt="">
                         </a>
-                        <button type="button" onclick="toggleMenu()" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <button type="button" onclick="toggleMenu()"
+                            class="ml-auto -m-2.5 rounded-md p-2.5 text-white z-50">
                             <span class="sr-only">Close menu</span>
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -90,8 +92,7 @@
                         </button>
                     </div>
                     <div class="mt-6 flow-root w-full h-full" onclick="toggleMenu()">
-                        <div
-                            class="-my-6 divide-y divide-custom-light-blue w-full h-full flex flex-col justify-between items-start">
+                        <div class="-my-6 divide-y w-full h-full flex flex-col justify-between items-start">
                             <div class="space-y-2 py-6">
                                 <a href="#inicio"
                                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-[#1a3b69]">Início</a>
@@ -112,18 +113,17 @@
         </nav>
     </header>
     <main>
-        <section id="inicio"
-         class="bg-cover bg-center bg-gray-700 bg-blend-multiply h-screen w-full" style="background-image: url('./docs/images/fotos/caminhoes.jpg');">
-
+        <section id="inicio" class="bg-cover bg-center bg-gray-700 bg-blend-multiply h-screen w-full"
+            style="background-image: url('./docs/images/fotos/caminhoes.jpg');">
             <div
                 class="relative isolate px-6 pt-14 lg:px-8 h-screen w-full flex justify-center content-center items-center flex-col">
                 <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 flex gap-10 flex-col">
                     <div class="flex justify-center content-center items-center">
-                        <img src="./docs/images/logos/LOGO RJA - FREIOS vertical.svg" alt="logo_inicio"
+                        <img src="./docs/images/logos/LOGO RJA - FREIOS vertical branca.svg" alt="logo_inicio"
                             class="w-full h-auto">
                     </div>
                     <div class="text-center">
-                        <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+                        <p class="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">
                             Soluções em freios, válvulas pneumáticas, pistões hidráulicos e bombas para caminhões e
                             máquinas
                             pesadas. Atendemos transportadoras e indústrias agrícolas e de construção.</p>
@@ -131,71 +131,17 @@
                             <a href="#"
                                 class="rounded-md bg-[#002c69] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                 Fale com um dos nossos consultores</a>
-                            <a href="#" class="text-sm/6 font-semibold text-[#002c69] hover:text-gray-500">Saiba mais
+                            <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-500">Saiba mais
                                 <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                </div>
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-                </div>
-                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div> -->
         </section>
         <section id="sobre-nos">
             <div
-                class="relative isolate overflow-hidden bg-[#002c69] py-24 sm:py-32 min-h-screen w-full flex justify-center content-center items-center">
-                <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-                    aria-hidden="true">
-                    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-gray-500 to-[#012250] opacity-20"
-                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                    </div>
-                </div>
-                <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-                    aria-hidden="true">
-                    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-gray-500 to-[#012250] opacity-20"
-                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                    </div>
-                </div>
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                class="p-9 gap-9 relative isolate bg-[#002c69] min-h-screen w-full flex justify-center content-center items-center">
+                <div class="md:p-9 w-full h-1/2 md:h-[70vh]">
                     <div class="mx-auto max-w-2xl lg:mx-0">
                         <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Sobre Nós</h2>
                         <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
@@ -238,178 +184,64 @@
         </section>
 
         <section id="servicos">
-            <div class="bg-white py-24 sm:py-32">
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div class="mx-auto max-w-2xl lg:text-center">
+            <div
+                class="p-9 gap-9 w-full min-h-auto md:min-h-screen bg-white flex md:flex-row flex-col justify-center content-center items-center">
+                <div class="md:p-9 w-full h-1/2 md:w-1/2 md:h-[70vh]">
+                    <div class="w-full h-1/2 text-left">
                         <h2 class="text-5xl font-semibold tracking-tight text-[#002c69] sm:text-7xl">Serviços</h2>
-                        <p class="mt-6 text-lg/8 text-gray-500">Quis tellus eget adipiscing convallis sit sit eget
-                            aliquet
-                            quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra
-                            elit
-                            nunc.</p>
+                        <p class="mt-6 text-lg/8 text-gray-500">
+                            Na nossa oficina especializada em máquinas pesadas, oferecemos soluções completas para
+                            sistemas de freio, hidráulica e pneumática, atendendo desde transportadoras até o setor
+                            agrícola e construção civil. Contamos com expertise para garantir o desempenho e a segurança
+                            dos seus equipamentos.
+                        </p>
                     </div>
-                    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                            <div class="relative pl-16">
-                                <dt class="text-base/7 font-semibold text-gray-500">
-                                    <div
-                                        class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-[#002c69]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                        </svg>
-                                    </div>
-                                    Cuícas de Freio
-                                </dt>
-                                <dd class="mt-2 text-base/7 text-gray-500">
-                                    Manutenção e substituição de cuícas para sistemas de freio de caminhões e veículos
-                                    pesados, garantindo segurança e eficiência nas frenagens.</dd>
-                            </div>
-                            <div class="relative pl-16">
-                                <dt class="text-base/7 font-semibold text-gray-500">
-                                    <div
-                                        class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-[#002c69]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                        </svg>
-                                    </div>
-                                    Servos de Freio
-                                </dt>
-                                <dd class="mt-2 text-base/7 text-gray-500">Instalação e reparo de servos para otimizar a
-                                    força de frenagem e o desempenho do sistema hidráulico de freios.</dd>
-                            </div>
-                            <div class="relative pl-16">
-                                <dt class="text-base/7 font-semibold text-gray-500">
-                                    <div
-                                        class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-[#002c69]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                        </svg>
-                                    </div>
-                                    Válvulas de Câmbio Eletropneumáticas
-                                </dt>
-                                <dd class="mt-2 text-base/7 text-gray-500">Serviços em válvulas de câmbio que integram
-                                    sistemas eletropneumáticos para uma troca de marchas precisa e suave.</dd>
-                            </div>
-                            <div class="relative pl-16">
-                                <dt class="text-base/7 font-semibold text-gray-500">
-                                    <div
-                                        class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-[#002c69]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                        </svg>
-                                    </div>
-                                    Tranguladores
-                                </dt>
-                                <dd class="mt-2 text-base/7 text-gray-500">Especialistas em instalação e ajuste de
-                                    tranguladores, fundamentais para a segurança e controle em frenagens e manobras.
-                                </dd>
-                            </div>
-                        </dl>
-                        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                            <div
-                                class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                                <div class="group relative">
-                                    <div
-                                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                        <img src="https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg"
-                                            alt="Front of men&#039;s Basic Tee in black."
-                                            class="size-full object-cover object-center lg:size-full">
-                                    </div>
-                                    <div class="mt-4 flex justify-between">
-                                        <div>
-                                            <h3 class="text-sm text-[#002c69]">
-                                                <a href="#">
-                                                    <span aria-hidden="true"
-                                                        class="text-[#002c69] absolute inset-0"></span>
-                                                    Basic Tee
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="group relative">
-                                    <div
-                                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                        <img src="https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg"
-                                            alt="Front of men&#039;s Basic Tee in black."
-                                            class="size-full object-cover object-center lg:size-full">
-                                    </div>
-                                    <div class="mt-4 flex justify-between">
-                                        <div>
-                                            <h3 class="text-sm text-[#002c69]">
-                                                <a href="#">
-                                                    <span aria-hidden="true"
-                                                        class="text-[#002c69] absolute inset-0"></span>
-                                                    Basic Tee
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="w-full mt-10 h-1/2 text-left">
+                        <h2 id="titulo-servico" class="text-2xl font-semibold tracking-tight text-[#002c69]">Reparo de
+                            Freios</h2>
+                        <p id="titulo-descricao" class="mt-6 text-lg/8 text-gray-500">Garantimos a segurança do seu
+                            veículo com manutenção especializada nos sistemas de freios.</p>
+                    </div>
+                </div>
 
-                                <div class="group relative">
-                                    <div
-                                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                        <img src="https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg"
-                                            alt="Front of men&#039;s Basic Tee in black."
-                                            class="size-full object-cover object-center lg:size-full">
-                                    </div>
-                                    <div class="mt-4 flex justify-between">
-                                        <div>
-                                            <h3 class="text-sm text-[#002c69]">
-                                                <a href="#">
-                                                    <span aria-hidden="true"
-                                                        class="text-[#002c69] absolute inset-0"></span>
-                                                    Basic Tee
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="group relative">
-                                    <div
-                                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                        <img src="https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg"
-                                            alt="Front of men&#039;s Basic Tee in black."
-                                            class="size-full object-cover object-center lg:size-full">
-                                    </div>
-                                    <div class="mt-4 flex justify-between">
-                                        <div>
-                                            <h3 class="text-sm text-[#002c69]">
-                                                <a href="#">
-                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                    Basic Tee
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="w-full h-1/2 md:w-1/2 md:h-[70vh]flex justify-center">
+                    <div id="service-carousel" class="relative w-full h-full rounded-3xl">
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                            <img id="imagem-do-carrossel" src="https://via.placeholder.com/600x400?text=Serviço+1"
+                                class="absolute block w-full h-full object-cover" alt="Serviço">
                         </div>
+
+                        <div class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
+                            <button onclick="mostrarServico(0)" class="w-3 h-3 rounded-full bg-[#002c69]"></button>
+                            <button onclick="mostrarServico(1)" class="w-3 h-3 rounded-full bg-[#002c69]"></button>
+                            <button onclick="mostrarServico(2)" class="w-3 h-3 rounded-full bg-[#002c69]"></button>
+                        </div>
+
+                        <button onclick="anteriorServico()"
+                            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer">
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">⟨</span>
+                        </button>
+                        <button onclick="proximoServico()"
+                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer">
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">⟩</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contatos" class="flex items-center justify-center w-full h-screen md:h-[50vh] md:flex-row flex-col flex-wrap-reverse bg-red-500">
+
+
+        <section id="contatos"
+            class="flex items-center justify-center w-full h-screen md:h-[50vh] md:flex-row flex-col flex-wrap-reverse">
             <div class="md:w-1/2 md:h-full w-full h-1/2">
-                <iframe
-                    class="w-full h-full"
+                <iframe class="w-full h-full"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15290.668391695901!2d-49.333295799999995!3d-16.6434686!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef51588918725%3A0x3692149c1d4e5a65!2sRJA%20FREIOS!5e0!3m2!1spt-BR!2sbr!4v1731944518715!5m2!1spt-BR!2sbr"
-                    allowfullscreen="true" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>            
+            </div>
             <div class="md:w-1/2 md:h-full w-full h-1/2 flex justify-center flex-wrap flex-col">
                 <div class="bg-[#002c69] h-1/3 w-full p-5 items-center justify-center content-center">
                     <div class="w-full h-1/2 flex fle-row items-center justify-center content-center gap-3">
@@ -467,7 +299,8 @@
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="./docs/images/logos/LOGO RJA - FREIOS horizontal.svg" class="h-12" alt="rja_freios" />
+                    <img src="./docs/images/logos/LOGO RJA - FREIOS horizontal branca.svg" class="h-12"
+                        alt="rja_freios" />
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
                     <li>
